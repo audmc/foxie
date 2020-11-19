@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+{{ parent() }} - Les modes de paiement
+{% endblock %}
+
+{% block body %}
+<h2> Tous les modes de paiement </h2>
+
+       <table class="table thead-dark">
+        <thead class="thead-dark">
+            <tr class="text-center">
+                <th>type</th>
+                
+ 
+            </tr>
+        </thead>
+
+        <tbody>
+
+        {% for allModesDePaiement in allModeDePaiement %}
+            <tr class="text-center">
+
+                            <td>
+                    <a href="{{ path('modedepaiement_all') }}">
+                        {{ allModesDePaiement.type }}
+                    </a>
+                </td>
+                              
+
+                <td>
+
+                                
+                    <a href="{{ path('modedepaiement_supprimer', {'id':allModesDePaiement.id }) }}">
+                        Supprimer
+                    </a>
+                    
+                </td>    
+            </tr>
+
+
+        
+        </tbody>
+
+
+        {% endfor %}
+
+            <a class=" btn btn-primary" href  =" {{ path('modedepaiement_create') }}">
+                        Ajouter un mode de paiement
+                    </a>
+
+    </table>
+{% endblock %}

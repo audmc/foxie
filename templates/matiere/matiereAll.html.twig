@@ -1,0 +1,153 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+{{ parent() }} - Les cours
+{% endblock %}
+
+{% block content %}
+
+
+            <section>
+            
+                <div class="row">
+                    <div class="col-12 m-3">
+                        <h3>Reprendre vos cours</h3>
+                    </div>
+                {% for allMatieres in allMatiere %}
+                    <div class="col-sm-4 col-lg-2">
+                        <div class="card align-items-center" >
+                            <img src="img/illustrator.png" class="card-img-top m-4" alt="...">
+                            <div class="card-body text-center p-0 mb-4">
+                                <h3>{{ allMatieres.nomMatiere }}</h3>
+                                <p class="card-text">Logiciel de prototype désigné aux UX / UI designer</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}     
+                   
+                </div>
+               
+            </section>
+
+            <section>
+            
+                <div class="row">
+                    <div class="col-12 m-3">
+                        <h3>Les logiciels les plus en vogue</h3>
+                    </div>
+                
+            {% for allMatieres in allMatiere %}
+                    <div class="col-sm-4 col-lg-2">
+                        <div class="card align-items-center" >
+                            <img src="img/illustrator.png" class="card-img-top m-4" alt="...">
+                            <div class="card-body text-center p-0 mb-4">
+                                <h3>{{ allMatieres.nomMatiere }}</h3>
+                                <p class="card-text">Logiciel de prototype désigné aux UX / UI designer</p>
+                            </div>
+                        </div>
+                    </div>
+            {% endfor %}         
+                </div>
+                
+            </section>
+
+            <section>
+                <div class="row">
+                    <div class="col-12 m-3">
+                        <h3>PAO</h3>
+                    </div>
+                {% for allMatieres in allMatiere %}    
+                    <div class="col-sm-4 col-lg-2">
+                        <div class="card align-items-center" >
+                            <img src="img/illustrator.png" class="card-img-top m-4" alt="...">
+                            <div class="card-body text-center p-0 mb-4">
+                                <h3>{{ allMatieres.nomMatiere }}</h3>
+                                <p class="card-text">Logiciel de prototype désigné aux UX / UI designer</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}     
+                   
+                </div>
+            </section>
+
+            <section>
+                <div class="row">
+                    <div class="col-12 m-3">
+                        <h3>Design Digital</h3>
+                    </div>
+                {% for allMatieres in allMatiere %}    
+                    <div class="col-sm-4 col-lg-2">
+                        <div class="card align-items-center" >
+                            <img src="img/illustrator.png" class="card-img-top m-4" alt="...">
+                            <div class="card-body text-center p-0 mb-4">
+                                <h3>{{ allMatieres.nomMatiere }}</h3>
+                                <p class="card-text">Logiciel de prototype désigné aux UX / UI designer</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}    
+                </div>
+            </section>
+
+            <section>
+                <div class="row">
+                    <div class="col-12 m-3">
+                        <h3>CAO</h3>
+                    </div>
+                {% for allMatieres in allMatiere %}     
+                    <div class="col-sm-4 col-lg-2">
+                        <div class="card align-items-center" >
+                            <img src="img/illustrator.png" class="card-img-top m-4" alt="...">
+                            <div class="card-body text-center p-0 mb-4">
+                                <h3>{{ allMatieres.nomMatiere }}</h3>
+                                <p class="card-text">Logiciel de prototype désigné aux UX / UI designer</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}     
+                    
+                </div>
+            </section>
+
+            <section>
+                <div class="row">
+                    <div class="col-12 m-3">
+                        <h3>Front End</h3>
+                    </div>
+                {% for allMatieres in allMatiere %}     
+                    <div class="col-sm-4 col-lg-2">
+                        <div class="card align-items-center" >
+                            <img src="img/illustrator.png" class="card-img-top m-4" alt="...">
+                            <div class="card-body text-center p-0 mb-4">
+                                <h3>{{ allMatieres.nomMatiere }}</h3>
+                                <p class="card-text">Logiciel de prototype désigné aux UX / UI designer</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}    
+                </div>
+            </section>
+
+            <section>
+                <div class="row">
+                    <div class="col-12 m-3">
+                        <h3>Back Office</h3>
+                    </div>
+                {% for allMatieres in allMatiere %}      
+                    <div class="col-sm-4 col-lg-2">
+                        <div class="card align-items-center" >
+                            <img src="img/illustrator.png" class="card-img-top m-4" alt="...">
+                            <div class="card-body text-center p-0 mb-4">
+                                <h3>{{ allMatieres.nomMatiere }}</h3>
+                                <p class="card-text">Logiciel de prototype désigné aux UX / UI designer</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}     
+                </div>
+            </section>
+        </main>
+
+
+{% endblock %}

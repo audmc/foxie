@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+{{ parent() }} - Les niveaux
+{% endblock %}
+
+{% block body %}
+<h2> Tous les niveaux </h2>
+
+       <table class="table thead-dark">
+        <thead class="thead-dark">
+            <tr class="text-center">
+                <th>type</th>
+                <th>Description</th>
+ 
+            </tr>
+        </thead>
+
+        <tbody>
+
+        {% for allNiveaux in allNiveau %}
+            <tr class="text-center">
+
+                            <td>
+                    <a href="{{ path('niveau_all', {'id':allNiveaux.id }) }}">
+                        {{ allNiveaux.type }}
+                    </a>
+                </td>
+                <td>
+                    {{ allNiveaux.description |raw }}
+                </td>
+                               
+
+                <td>
+
+
+
+                                
+                    <a href="{{ path('niveau_supprimer', {'id':allNiveaux.id }) }}">
+                        Supprimer
+                    </a>
+                    
+                </td>    
+            </tr>
+
+
+        
+        </tbody>
+
+
+        {% endfor %}
+
+                                <a class=" btn btn-primary" href  =" {{ path('niveau_create') }}">
+                        Ajouter un niveau
+                    </a>
+
+    </table>
+{% endblock %}

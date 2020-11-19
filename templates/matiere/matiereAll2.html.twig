@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+{{ parent() }} - Les matieres
+{% endblock %}
+
+{% block body %}
+<h2> Toutes les matieres </h2>
+
+       <table class="table thead-dark">
+        <thead class="thead-dark">
+            <tr class="text-center">
+                <th>Nom de la matiere</th>
+                
+                
+ 
+            </tr>
+        </thead>
+
+        <tbody>
+
+        {% for allMatieres in allMatiere %}
+            <tr class="text-center">
+
+                <td>
+                    <a href="{{ path('matiere_all') }}">
+                        {{ allMatieres.nomMatiere }}
+                    </a>
+                </td>
+
+                              
+
+                <td>
+
+                                
+                    <a href="{{ path('matiere_supprimer', {'id':allMatieres.id }) }}">
+                        Supprimer
+                    </a>
+                    
+                </td>    
+            </tr>
+
+
+        
+        </tbody>
+
+
+        {% endfor %}
+
+            <a class=" btn btn-primary" href  =" {{ path('matiere_create') }}">
+                        Ajouter une matiere
+                    </a>
+
+    </table>
+{% endblock %}

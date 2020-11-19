@@ -1,0 +1,31 @@
+p{
+    margin:0; 
+}
+
+.fa-bars, .fa-search{
+    color: rgb(30, 30, 209);
+}
+
+.contain-nav{
+    display: flex;;
+}
+
+nav .rounded-circle {
+    width: 50px;
+    height: 50px;
+    background-image: url("img/test.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.progress{
+    height: 1vh;
+}
+.progress-bar{
+    width: 25%;
+}
+.card-img-top{
+    width: 10vh;
+}
+.footer{
+    background-color: rgb(20, 33, 74, 50%);
+}

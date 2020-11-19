@@ -1,3 +1,90 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+#--------- Page Niveau--------
+   
+niveau_create:
+  path: /admin/niveau/creer
+  controller: App\Controller\NiveauController::create
+
+niveau_supprimer:
+    path: /admin/niveau/supprimer/{id}
+    controller: App\Controller\NiveauController::delete
+    requirements :
+        id: \d+   
+
+niveau_all:
+  path: /admin/niveau/all
+  controller: App\Controller\NiveauController::niveauAll
+
+niveau_show:
+    path: /admin/niveau/show/{id}
+    controller: App\Controller\NiveauController::niveauShow
+    requirements :
+        id: \d+    
+
+#--------- Page Mode de paiement--------
+modedepaiement_create:
+  path: /admin/modedepaiement/creer
+  controller: App\Controller\ModeDePaiementController::create
+
+modedepaiement_supprimer:
+    path: /admin/modedepaiement/supprimer/{id}
+    controller: App\Controller\ModeDePaiementController::delete
+    requirements :
+        id: \d+   
+
+modedepaiement_all:
+  path: /admin/modedepaiement/all
+  controller: App\Controller\ModeDePaiementController::modeDePaiementAll
+
+modedepaiement_show:
+    path: /admin/modedepaiement/show/{id}
+    controller: App\Controller\ModeDePaiementController::modeDePaiementShow
+    requirements :
+        id: \d+    
+
+        
+#--------- matiere--------   
+
+
+matiere_create:
+  path: /admin/matiere/creer
+  controller: App\Controller\MatiereController::create
+
+matiere_supprimer:
+    path: /admin/matiere/supprimer/{id}
+    controller: App\Controller\MatiereController::delete
+    requirements :
+        id: \d+   
+
+matiere_all:
+  path: /admin/matiere/all
+  controller: App\Controller\MatiereController::matiereAll
+
+matiere_show:
+    path: /admin/matiere/show/{id}
+    controller: App\Controller\MatiereController::matiereShow
+    requirements :
+        id: \d+    
+
+
+#--------- abonnement --------   
+
+
+abonnement_create:
+  path: /admin/abonnement/creer
+  controller: App\Controller\AbonnementController::create
+
+abonnement_supprimer:
+    path: /admin/abonnement/supprimer/{id}
+    controller: App\Controller\AbonnementController::delete
+    requirements :
+        id: \d+   
+
+abonnement_all:
+  path: /admin/abonnement/all
+  controller: App\Controller\AbonnementController::abonnementAll
+
+abonnement_show:
+    path: /admin/abonnement/show/{id}
+    controller: App\Controller\AbonnementController::abonnementShow
+    requirements :
+        id: \d+    

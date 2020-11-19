@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+{{ parent() }} - Les abonnements
+{% endblock %}
+
+{% block body %}
+<h2> Tous les abonnements </h2>
+
+       <table class="table thead-dark">
+        <thead class="thead-dark">
+            <tr class="text-center">
+                <th>type</th>
+                
+ 
+            </tr>
+        </thead>
+
+        <tbody>
+
+        {% for allAbonnements in allAbonnement %}
+            <tr class="text-center">
+
+                            <td>
+                    <a href="{{ path('niveau_all', {'id':allAbonnements.id }) }}">
+                        {{ allAbonnements.type }}
+                    </a>
+                </td>
+                                              
+
+                <td>
+
+                                
+                    <a href="{{ path('abonnement_supprimer', {'id':allAbonnements.id }) }}">
+                        Supprimer
+                    </a>
+                    
+                </td>    
+            </tr>
+
+
+        
+        </tbody>
+
+
+        {% endfor %}
+
+            <a class=" btn btn-primary" href  =" {{ path('abonnement_create') }}">
+                        Ajouter un niveau
+                    </a>
+
+    </table>
+{% endblock %}
