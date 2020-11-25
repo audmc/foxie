@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+{{ parent() }} - Home
+{% endblock %}
+
+{% block body %}
+
+//logo
+
+<h1 class="text-center">FOXIE</h1>
+
+    <h2 class="text-center">Vivez votre formation comme si c'etait un jeu avec Foxie</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi fugiat reprehenderit tenetur, eaque optio est recusandae accusamus non laboriosam quidem dolorum consequatur facilis sapiente cupiditate, neque consectetur labore incidunt. Recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores esse id autem commodi nam reprehenderit odit quos labore eaque. Ad nostrum qui dolore sit numquam placeat impedit porro molestiae nihil?</p>
+
+    <div class="text-center"> 
+       <a href="{{ path('app_register') }}"><button class="btn btn-light btn-lg pl-5 pr-5">SING IN</button></a>
+
+         <a href="{{ path('app_login') }}"><button class="btn btn-light btn-lg pl-5 pr-5">SING UP</button></a>
+    </div>  
+
+{% endblock %}
