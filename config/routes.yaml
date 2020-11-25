@@ -12,6 +12,17 @@ acceuil:
   path: /acceuil
   controller: App\Controller\AcceuilController::acceuil
 
+#---------- profil -----------
+profil_update:
+  path: /profil/update
+  controller: App\Controller\ProfilController::update
+
+
+profil_delete:
+  path: /profil/delete/{id}
+  controller: App\Controller\ProfilController::delete
+  requirements :
+    id: \d+  
 
 #--------- Page Niveau--------
    
@@ -20,10 +31,10 @@ niveau_create:
   controller: App\Controller\NiveauController::create
 
 niveau_supprimer:
-    path: /admin/niveau/supprimer/{id}
-    controller: App\Controller\NiveauController::delete
-    requirements :
-        id: \d+   
+  path: /admin/niveau/supprimer/{id}
+  controller: App\Controller\NiveauController::delete
+  requirements :
+    id: \d+   
 
 niveau_all:
   path: /admin/niveau/all
@@ -33,7 +44,7 @@ niveau_show:
     path: /admin/niveau/show/{id}
     controller: App\Controller\NiveauController::niveauShow
     requirements :
-        id: \d+    
+      id: \d+    
 
 #--------- Page Mode de paiement--------
 modedepaiement_create:
@@ -44,7 +55,7 @@ modedepaiement_supprimer:
     path: /admin/modedepaiement/supprimer/{id}
     controller: App\Controller\ModeDePaiementController::delete
     requirements :
-        id: \d+   
+      id: \d+   
 
 modedepaiement_all:
   path: /admin/modedepaiement/all
@@ -68,7 +79,7 @@ matiere_supprimer:
     path: /admin/matiere/supprimer/{id}
     controller: App\Controller\MatiereController::delete
     requirements :
-        id: \d+   
+      id: \d+   
 
 matiere_all:
   path: /admin/matiere/all
@@ -78,7 +89,7 @@ matiere_show:
     path: /admin/matiere/show/{id}
     controller: App\Controller\MatiereController::matiereShow
     requirements :
-        id: \d+    
+      id: \d+    
 
 
 #--------- abonnement --------   
@@ -92,7 +103,7 @@ abonnement_supprimer:
     path: /admin/abonnement/supprimer/{id}
     controller: App\Controller\AbonnementController::delete
     requirements :
-        id: \d+   
+      id: \d+   
 
 abonnement_all:
   path: /admin/abonnement/all
@@ -102,4 +113,4 @@ abonnement_show:
     path: /admin/abonnement/show/{id}
     controller: App\Controller\AbonnementController::abonnementShow
     requirements :
-        id: \d+    
+      id: \d+    
