@@ -1,20 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello UtilisateurController!{% endblock %}
+{% block title %}Profil {% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<h1 class="text-center">Hello (nom de l'utilisateur) </h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Applications/MAMP/htdocs/foxie/src/Controller/UtilisateurController.php'|file_link(0) }}">src/Controller/UtilisateurController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Applications/MAMP/htdocs/foxie/templates/utilisateur/index.html.twig'|file_link(0) }}">templates/utilisateur/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <a href="#"><h2> Modifier ton profil</h2></a>
+
+    <h2>Mes competences</h2>
+
+    <h2>Mes badges</h2>
+    <div>
+        <h2>Recevez une surprise</h2>
+        <p>Invitez vos amis : 1 mois d'abonnement gratuit pour eux,une surprise pourt vous!</p>
+        <a href="#" class="btn btn-light btn-lg pl-5 pr-5"><button>Invitez des amis</button></a>
+    </div>
+    <h2>Mon abonnement</h2>
+    <a href="#" class="btn btn-light btn-lg pl-5 pr-5">Gerer mon abonnement</a>
+ 
+
 {% endblock %}
