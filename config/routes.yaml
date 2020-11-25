@@ -1,3 +1,12 @@
+# utilisateur =  @Route("/utilisateur", name="utilisateur")
+# register = @Route("/register", name="app_register")
+# abonnement = @Route("/abonnement", name="abonnement")
+# Authentification = @Route("/login", name="app_login")
+# Cours = @Route("/cours", name="cours")
+# matiere = @Route("/matiere", name="matiere")
+# Mode de paiement @Route("/mode/de/paiement", name="mode_de_paiement")
+# Niveau = @Route("/niveau", name="niveau")
+
 #--------- Page Niveau--------
    
 niveau_create:
