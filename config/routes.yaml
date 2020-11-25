@@ -1,11 +1,17 @@
 # utilisateur =  @Route("/utilisateur", name="utilisateur")
-# register = @Route("/register", name="app_register")
+# register = @Route("/register", name="app_register") --> OK
 # abonnement = @Route("/abonnement", name="abonnement")
-# Authentification = @Route("/login", name="app_login")
+# Authentification = @Route("/login", name="app_login") --> OK
 # Cours = @Route("/cours", name="cours")
 # matiere = @Route("/matiere", name="matiere")
 # Mode de paiement @Route("/mode/de/paiement", name="mode_de_paiement")
 # Niveau = @Route("/niveau", name="niveau")
+
+# ------- page d'acceuil ---------
+acceuil:
+  path: /acceuil
+  controller: App\Controller\AcceuilController::acceuil
+
 
 #--------- Page Niveau--------
    
