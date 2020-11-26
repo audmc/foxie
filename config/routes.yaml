@@ -12,6 +12,15 @@ acceuil:
   path: /acceuil
   controller: App\Controller\AcceuilController::acceuil
 
+#------Authentification ----------
+
+
+
+# ------- page du burger ---------
+burger:
+  path: /burger
+  controller: App\Controller\BurgerController::burger  
+
 #---------- profil -----------
 profil_update:
   path: /profil/update
