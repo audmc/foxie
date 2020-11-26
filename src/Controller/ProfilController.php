@@ -32,7 +32,7 @@ class ProfilController extends AbstractController
             $em->persist($profil);
             $em->flush();
 
-            return $this->redirectToRoute('profil_update');
+            return $this->redirectToRoute('matiere_all');
         }
 
         return $this->render('profil/update.html.twig',[
