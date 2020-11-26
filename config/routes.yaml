@@ -14,9 +14,11 @@ acceuil:
 
 #------deconnexion ----------
 
-deconnexion:
-  path: /deconnexion
+app_logout:
+  path: /logout
   controller: App\Controller\AuthentificationController::logout
+
+
 # ------- page du burger ---------
 burger:
   path: /burger
