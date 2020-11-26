@@ -26,7 +26,7 @@ class ProfilType extends AbstractType
             ->add('ville')
             ->add('abonnement')            
             ->add('Enregister',SubmitType::class)
-            ->add('Revenir acceuil',ButtonType::class)
+            
         ;
     }
 
