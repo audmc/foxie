@@ -1,11 +1,69 @@
+{% extends 'base.html.twig' %}
 
+{% block body %}
+<style>
+#burger{
+    background-color:white;
+    display:none;
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    top:40px;
+    z-index:3;
+}
+#burger ul {
+    list-style:none;
+}
+
+</style>
+<script>
+
+    // LORSQUE LE DOC A FINI DE SE CHARGER
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+        // EVENT CLICK SUR BURGER
+        document.getElementById("burger-icon").addEventListener('click', clickOnBurger, false);
+        var burgerIsOpen = false;
+
+        // DETECTION DU CLICK SUR BURGER
+        function clickOnBurger(e) {
+
+            // RECUPERATION DE LA DESTINATION DU LIEN
+            let destination = e.target.parentNode.href;
+
+            // LANCE LA REQUETE AJAX
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+
+                // SI LA REQUETE S'EST BIEN EXECUTÉE
+                if (this.readyState == 4 && this.status == 200) {
+
+                    // ON CHARGE LE HTML OPBTENU DANS LE BURGER
+                    document.getElementById("burger").innerHTML = xhttp.responseText;
+                }
+            };
+            xhttp.open("GET", destination, true);
+            xhttp.send();
+
+            // AFFICHER OU CACHER LE BURGER MENU
+            document.getElementById("burger").style.display = burgerIsOpen ? "none" : "block";
+            burgerIsOpen = !burgerIsOpen;
+
+            // ANNULER LE FONCTION NORMAL DU LIEN
+            e.preventDefault();
+        } 
+
+    });
+
+</script>
         <header>
             <nav>
                 <div class="row flex-sm-row-reverse">
 
                     <div class="col-sm-6 col-lg-8 text-right d-flex justify-content-end">
-                        <div><i class="fas fa-search m-2"></i></div>
-                        <div><i class="fas fa-bars m-2"></i></div>
+                        <a href="#"><i class="fas fa-search m-2"></i></a>
+                        <a id="burger-icon" href="{{ path('burger') }}"><i class="fas fa-bars m-2"></i></a>
+                        <div id="burger"></div>
                     </div>
 
                     <div class="col-sm-6 col-lg-4">
@@ -37,3 +95,4 @@
             </section>
         </header>
 
+{% endblock %}
