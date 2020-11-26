@@ -62,6 +62,11 @@ class Profil
      */
     private $ville;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $abonnement;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -171,6 +176,18 @@ class Profil
     public function setVille(?string $ville): self
     {
         $this->ville = $ville;
+
+        return $this;
+    }
+
+    public function getAbonnement(): ?string
+    {
+        return $this->abonnement;
+    }
+
+    public function setAbonnement(string $abonnement): self
+    {
+        $this->abonnement = $abonnement;
 
         return $this;
     }
