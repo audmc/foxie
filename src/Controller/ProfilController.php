@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Profil;
 use App\Form\ProfilType;
-use App\Entity\Utilisateur;
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -32,7 +32,7 @@ class ProfilController extends AbstractController
             $em->persist($profil);
             $em->flush();
 
-            return $this->redirectToRoute('acceuil');
+            return $this->redirectToRoute('profil_update');
         }
 
         return $this->render('profil/update.html.twig',[
