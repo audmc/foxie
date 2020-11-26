@@ -12,10 +12,11 @@ acceuil:
   path: /acceuil
   controller: App\Controller\AcceuilController::acceuil
 
-#------Authentification ----------
+#------deconnexion ----------
 
-
-
+deconnexion:
+  path: /deconnexion
+  controller: App\Controller\AuthentificationController::logout
 # ------- page du burger ---------
 burger:
   path: /burger
